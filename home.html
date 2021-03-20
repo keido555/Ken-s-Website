@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link href='https://css.gg/components.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">
+    <title>Kenji's page</title>
+</head>
+<body>
+    <header>
+        <div class="head">
+            <div class="head_title">
+                <p>
+                    ウェブデザイン<br />
+                    Kenji Ogawara.JP
+                </p>
+            </div>
+            <div class="humburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn">
+                    <span></span>
+                </label>
+                <div class="menu-content">
+                    <ul>
+                        <li><a href="#aboutMe">About Me</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!--home画像-->
+        <div id="top-header" class="top-header">
+            <h1 class="top-header_title">CREATIVE<br />WEBSITE</h1>
+            <p>
+                SITE DESIGN / CODING - HTML, CSS, JavaScript, JQuery, TypeScript / <br />
+                React / WordPress / PHP / shopify
+            </p>
+            <div id="top-header-deco" class="top-header-deco"></div>
+            <div id="top-header-tri" class="top-header-tri"></div>
+            <div id="top-header-circle" class="top-header-circle"></div>
+        </div>
+
+        <div id="aboutMe" class="aboutMe">
+            <div class="aboutMe-head">
+                <h1 class="aboutMe_title"><i class="fi-torso"></i>About Me</h1>
+                <img src="img/1616227775725.jpg" class="myFhoto" />
+            </div>
+            <div class="aboutMe-introduction">
+                <h2>Introduction</h2>
+                <p>
+                    はじめまして。 Webエンジニアの大河原ケンジです。<br />
+                    現在フロントエンドを中心にWeb制作を行っております。<br />
+                    「<span class="font_color">質</span>」と「<span class="font_color">スピード</span>」を重視することで、期待以上のものを提供させていただきます。<br />
+                    またクライアント様に寄り添った<span class="font_color">丁寧なコミュニケーション</span>を常に心掛け、
+                    <span class="font_color">最後まで責任を持って</span>、仕事に取り組ませていただきます。
+                </p>
+            </div>
+            <div class="aboutMe-education">
+                <h2>Education</h2>
+                <p>
+                    1993年 : 岡山県岡山市出身<br />
+                    2017年 : 龍谷大学文学部歴史学科卒業<br />
+                    2020年 : プログラミングスクール code village にてプログラミングを始める。
+                    Reactを中心としたWeb制作の勉強を修了。
+                </p>
+            </div>
+        </div>
+
+        <div id="service" class="service">
+            <div class="service-head">
+                <h2 class="service-title"><i class="fi-compass"></i>Service</h2>
+            </div>
+            <div class="service-list">
+                <div class="service-item">
+                    <img class="service-picture" src="img/wordpress.png" />
+                    <div class="service-introduction">
+                        <h3>WordPress</h3>
+                        <h4>設計・デザイン</h4>
+                        <p>
+                            更新が必要なサイトを WordPress にて一新します。テーマファイルを設計し、
+                            メディアECやウェブマガジンにも対応可能です。
+                            <br />
+                            <br />
+                            【料金目安】
+                            <br />
+                            WordPress移行：¥100,000-<br />
+                            WordPress制作：¥200,000-
+                        </p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img class="service-picture" src="img/shopify.jpg" />
+                    <div class="service-introduction">
+                        <h3>ショッピングサイト</h3>
+                        <h4>デザインカスタマイズ</h4>
+                        <p>
+                            shopifyを用いたオンラインショップを作成します。Nocodeを用いるため、
+                            短時間で高クオリティの物が納品可能です。
+                            <br />
+                            <br />
+                            【料金目安】
+                            <br />
+                            ショッピングサイト制作：¥80,000-
+                            <br />
+                        </p>
+                    </div>
+                </div>
+                <div class="service-item">
+                    <img class="service-picture" src="img/web.jpg" />
+                    <div class="service-introduction">
+                        <h3>コーポレートサイト</h3>
+                        <h4>会社案内・Webサイト開発</h4>
+                        <p>
+                            会社のイメージを重視しながら会社概要やお知らせの掲載、所在地地図の設置などに対応致します。
+                            またWebサイトを一から制作もしております。
+                            <br />
+                            <br />
+                            【料金目安】
+                            <br />
+                            コード修正：¥10,000-/1P<br />
+                            LP制作：¥20,000-/1P
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="service-under" style="margin: 10px;">
+                <span>
+                    <a href="#service" class="service-details">サービス内容の詳細</a>
+                </span>
+            </div>
+        </div>
+
+        <div id="work" class="work">
+            <div class="work-title">
+                <h2><i class="fi-monitor"></i>Work</h2>
+            </div>
+            <div class="work-list 1">
+                <!--一つ目のポートフォリオ-->
+                <a href="#"　class="work_link">
+                    <div class="work-item-1">
+                        <img src="./img/home.jpg" class="work-img-1" />
+                        <div class="mask1"></div>
+                        <div class="mask2"></div>
+                        <div class="caption-1">
+                            <p>
+                                "【Category】オリジナル作品"
+                                <br />
+                                <br />
+                                "【Title】Kenji Ogawara's portfolio"
+                                <br />
+                                <br />
+                                "【Skill】HTML / CSS / JQuery"
+                                <br />
+                                <br />
+                                "私のことを知ってもらうためのサイトです"
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <!--二つ目のポートフォリオ-->
+                <a href="#"　class="work-link">
+                    <div class="work-item-2">
+                        <img src="img/home1.jpg" class="work-img-2" />
+                        <div class="mask1"></div>
+                        <div class="mask2"></div>
+                        <div class="caption-2">
+                            <p>
+                                "【Category】オリジナル作品"
+                                <br />
+                                <br />
+                                "【Title】Kibidu's liquor-shop"
+                                <br />
+                                <br />
+                                "【Skill】HTML / CSS / JQuery"
+                                <br />
+                                <br />
+                                "オリジナルの酒屋サイトです"
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <!--三つ目のポートフォリオ-->
+                <a href="https://github.com/keido555/chatapp-Mac.git"　class="work-link">
+                    <div class="work-item-3">
+                        <img src="img/party2.jpg" class="work-img-3" />
+                        <div class="mask1"></div>
+                        <div class="mask2"></div>
+                        <div class="caption-3">
+                            <p>
+                                "【Category】オリジナル作品"
+                                <br />
+                                <br />
+                                "【Title】チャットアプリ"
+                                <br />
+                                <br />
+                                "【Skill】JavaScript / React"
+                                <br />
+                                <br />
+                                "Reactを用いたチャットアプリです。"
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div id="contact" class="contact">
+            <div class="contact-title">
+                <h2><i class="fi-mail"></i>Contact</h2>
+            </div>
+            <div class="contact-icons">
+                <p>ご依頼（ご相談）はメールよりお願い致します</p>
+                <ul>
+                    <a href="mailto:w03optfd73@gmail.com?body=ご依頼/ご相談内容"><i class="fi-mail"></i></a>
+                    <a href="https://twitter.com/kenW59710310"><i class="fi-social-twitter"></i></a>
+                    <a href="https://www.facebook.com/people/%E8%84%87%E6%9C%AC%E7%A0%94%E5%8F%B8/100043678385385"><i class="fi-social-facebook"></i></a>
+                </ul>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-title">
+            <p>copyright @ Kenji Ogawara.JP</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

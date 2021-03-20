@@ -1,0 +1,752 @@
+@charset "UTF-8";
+html, body {
+  color: black;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* header */
+header {
+  background-color: white;
+  height: 80px;
+}
+
+header #menu-btn-check {
+  display: none;
+}
+
+header .head {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  position: relative;
+  z-index: 20;
+  /* header部分　装飾 */
+}
+
+header .head .head_title {
+  margin-left: 20px;
+  font-size: 16px;
+}
+
+header .head ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 40;
+}
+
+header .head ul li {
+  padding-top: 5px;
+  padding-right: 15px;
+}
+
+@media screen and (max-width: 500px) {
+  header .head_title {
+    position: fixed;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  header .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #fff;
+  }
+  header .menu-btn span,
+  header .menu-btn span::before,
+  header .menu-btn span::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
+  }
+  header .menu-btn span::before {
+    bottom: 8px;
+  }
+  header .menu-btn span::after {
+    top: 8px;
+  }
+  header #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  header #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  header #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  header #menu-btn-check {
+    display: none;
+  }
+  header #menu-btn-check:checked ~ .menu-content {
+    left: 0;
+  }
+  header .menu-content {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    transition: all 0.5s;
+  }
+  header .menu-content ul {
+    padding: 70px 10px 0;
+  }
+  header .menu-content ul li {
+    border-bottom: solid 1px #fff;
+    list-style: none;
+  }
+  header .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+  header .menu-content ul li a ::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header .head_title {
+    position: fixed;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+  header .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: #fff;
+  }
+  header .menu-btn span,
+  header .menu-btn span::before,
+  header .menu-btn span::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: black;
+    position: absolute;
+  }
+  header .menu-btn span::before {
+    bottom: 8px;
+  }
+  header .menu-btn span::after {
+    top: 8px;
+  }
+  header #menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);
+  }
+  header #menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+  header #menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+  header #menu-btn-check {
+    display: none;
+  }
+  header #menu-btn-check:checked ~ .menu-content {
+    left: 0;
+  }
+  header .menu-content {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 80;
+    transition: all 0.5s;
+  }
+  header .menu-content ul {
+    padding: 70px 10px 0;
+  }
+  header .menu-content ul li {
+    border-bottom: solid 1px #fff;
+    list-style: none;
+  }
+  header .menu-content ul li a {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    box-sizing: border-box;
+    color: black;
+    text-decoration: none;
+    padding: 9px 15px 10px 0;
+    position: relative;
+  }
+  header .menu-content ul li a ::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 11px;
+    top: 16px;
+  }
+}
+
+/* top画面 */
+.top-header {
+  /*
+    background-image: url("../img/coffe.jpg");
+    background-size: cover;
+    */
+  height: 750px;
+}
+
+.top-header h1 {
+  position: relative;
+  /*top: 45%;*/
+  top: 27%;
+  font-size: 72px;
+  transform: rotate(-8deg);
+  letter-spacing: 10px;
+  z-index: 30;
+}
+
+@media screen and (max-width: 500px) {
+  .top-header h1 {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .top-header h1 {
+    font-size: 64px;
+  }
+}
+
+.top-header p {
+  position: relative;
+  top: 55%;
+  font-size: 30px;
+  z-index: 30;
+}
+
+.top-header .top-header-deco {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  top: -18%;
+  left: 36%;
+  opacity: 0.8;
+  background: linear-gradient(to bottom left, transparent 50%, #f5f551 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, #f5f551 50%) bottom left/100% 50% no-repeat;
+  transform: rotate(48deg);
+  z-index: 20;
+}
+
+@media screen and (max-width: 500px) {
+  .top-header .top-header-deco {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    top: -13%;
+    left: 25%;
+    opacity: 0.8;
+    background: linear-gradient(to bottom left, transparent 50%, #f5f551 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, #f5f551 50%) bottom left/100% 50% no-repeat;
+    transform: rotate(-14deg);
+    z-index: 20;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .top-header .top-header-deco {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: -14%;
+    left: 25%;
+    opacity: 0.8;
+    background: linear-gradient(to bottom left, transparent 50%, #f5f551 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, #f5f551 50%) bottom left/100% 50% no-repeat;
+    transform: rotate(-14deg);
+    z-index: 20;
+  }
+}
+
+.top-header .top-header-tri {
+  width: 700px;
+  height: 700px;
+  position: relative;
+  top: -145%;
+  opacity: 0.5;
+  background: linear-gradient(to bottom left, transparent 50%, lightgray 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, lightgray 50%) bottom left/100% 50% no-repeat;
+  transform: rotate(13deg);
+  z-index: 10;
+}
+
+.top-header .top-header-circle {
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: -110%;
+  left: 83%;
+  border-top: solid 10px red;
+  border-left: solid 10px green;
+  border-right: solid 10px blue;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 500px) {
+  .top-header .top-header-circle {
+    width: 3rem;
+    height: 3rem;
+    position: relative;
+    top: -100%;
+    left: 76%;
+    border-top: solid 10px red;
+    border-left: solid 10px green;
+    border-right: solid 10px blue;
+    border-radius: 50%;
+  }
+}
+
+/* aboutMe画面 */
+.aboutMe {
+  height: 1000px;
+}
+
+.aboutMe .aboutMe-head {
+  height: 300px;
+}
+
+.aboutMe .aboutMe-head .aboutMe_title {
+  font-size: 48px;
+  position: relative;
+  text-decoration: none;
+}
+
+.aboutMe .aboutMe-head .aboutMe_title .fi-torso {
+  padding-right: 10px;
+}
+
+.aboutMe .aboutMe-head .myFhoto {
+  margin-top: 20px;
+  width: 230px;
+  border-radius: 50%;
+  background-position: top;
+  display: inline-block;
+}
+
+.aboutMe .aboutMe-introduction {
+  height: 300px;
+  padding-top: 100px;
+}
+
+.aboutMe .aboutMe-introduction h2 {
+  font-size: 36px;
+  padding-bottom: 12px;
+}
+
+.aboutMe .aboutMe-introduction p {
+  font-size: 20px;
+  line-height: 30px;
+  width: 650px;
+  margin: 10px auto;
+  padding: 15px;
+  background: #c6e4ff;
+  border-bottom: solid 6px #aac5de;
+  border-radius: 9px;
+}
+
+.aboutMe .aboutMe-introduction p .font_color {
+  color: red;
+}
+
+@media screen and (max-width: 500px) {
+  .aboutMe .aboutMe-introduction p {
+    font-size: 16px;
+    width: 350px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .aboutMe .aboutMe-introduction p {
+    font-size: 16px;
+    width: 420px;
+    margin: 10px auto;
+    padding: 15px;
+  }
+}
+
+.aboutMe .aboutMe-education {
+  height: 300px;
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .aboutMe .aboutMe-education {
+    margin-top: 50px;
+  }
+}
+
+.aboutMe .aboutMe-education h2 {
+  font-size: 36px;
+  padding-bottom: 12px;
+}
+
+.aboutMe .aboutMe-education p {
+  font-size: 20px;
+  line-height: 30px;
+  text-align: left;
+  width: 650px;
+  margin: 10px auto;
+  padding: 15px;
+  background: #c6e4ff;
+  border-bottom: solid 6px #aac5de;
+  border-radius: 9px;
+}
+
+@media screen and (max-width: 500px) {
+  .aboutMe .aboutMe-education p {
+    font-size: 16px;
+    width: 350px;
+    margin: 10px auto;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .aboutMe .aboutMe-education p {
+    font-size: 16px;
+    width: 420px;
+    margin: 10px auto;
+    padding: 15px;
+  }
+}
+
+/* Service */
+.service {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 800px) {
+  .service {
+    margin-top: 70px;
+  }
+}
+
+.service .service-head {
+  margin: 10px;
+}
+
+.service .service-head .service-title {
+  font-size: 48px;
+}
+
+.service .service-head .service-title .fi-compass {
+  padding-right: 10px;
+}
+
+.service .service-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.service .service-list .service-item {
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.5);
+  margin: 0 30px 30px 30px;
+  position: relative;
+  /*display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));*/
+}
+
+.service .service-list .service-item .service-picture {
+  width: 100%;
+}
+
+.service .service-list .service-item .service-introduction {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.service .service-list .service-item .service-introduction h3 {
+  font-size: 20px;
+}
+
+.service .service-list .service-item .service-introduction h4 {
+  font-size: 18px;
+}
+
+.service .service-list .service-item .service-introduction p {
+  text-align: left;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.service .service-under {
+  margin: 15px;
+}
+
+.service .service-under h3 {
+  font-size: 20px;
+  color: black;
+}
+
+@media screen and (min-width: 500px) {
+  /*コース一覧*/
+  .service-item {
+    width: 70%;
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /*コース一覧*/
+  .service-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .service-item {
+    width: 40%;
+    height: 50%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /*コース一覧*/
+  .service-list {
+    display: flex;
+    justify-content: center;
+  }
+  .service-item {
+    width: 20%;
+    height: 50%;
+  }
+}
+
+.work {
+  margin-top: 30px;
+}
+
+.work .work-title {
+  font-size: 48px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.work .work-title .fi-monitor {
+  padding-right: 10px;
+}
+
+.work .work-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.work .work-list .work-item-1 {
+  height: 400px;
+  margin: 15px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.work .work-list .work-item-1 img {
+  width: 500px;
+  height: 350px;
+}
+
+.work .work-list .work-item-1 .mask1 {
+  left: -50%;
+}
+
+.work .work-list .work-item-1 .mask2 {
+  right: -50%;
+}
+
+.work .work-list .work-item-1 .caption-1 {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 50px;
+  left: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+}
+
+.work .work-list .work-item-1 .caption-1 p {
+  font-size: 125%;
+  width: 500px;
+}
+
+.work .work-list .work-item-2 {
+  height: 400px;
+  margin: 15px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.work .work-list .work-item-2 img {
+  width: 500px;
+  height: 350px;
+}
+
+.work .work-list .work-item-2 .mask1 {
+  left: -50%;
+}
+
+.work .work-list .work-item-2 .mask2 {
+  right: -50%;
+}
+
+.work .work-list .work-item-2 .caption-2 {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 50px;
+  left: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+}
+
+.work .work-list .work-item-2 .caption-2 p {
+  font-size: 125%;
+  width: 500px;
+}
+
+.work .work-list .work-item-3 {
+  height: 400px;
+  margin: 15px;
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.work .work-list .work-item-3 img {
+  width: 500px;
+  height: 350px;
+}
+
+.work .work-list .work-item-3 .mask1 {
+  left: -50%;
+}
+
+.work .work-list .work-item-3 .mask2 {
+  right: -50%;
+}
+
+.work .work-list .work-item-3 .caption-3 {
+  width: 500px;
+  height: 250px;
+  position: absolute;
+  top: 50px;
+  left: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+}
+
+.work .work-list .work-item-3 .caption-3 p {
+  font-size: 125%;
+  width: 500px;
+}
+
+@media screen and (min-width: 500px) {
+  .work .work-list {
+    font-size: 120%;
+  }
+}
+
+.contact {
+  margin-top: 30px;
+}
+
+.contact .contact-title {
+  font-size: 48px;
+  position: relative;
+}
+
+.contact .contact-title .fi-mail {
+  padding-right: 10px;
+}
+
+.contact .contact-icons {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.contact .contact-icons p {
+  font-size: 20px;
+}
+
+.contact .contact-icons ul {
+  margin-top: 20px;
+  font-size: 3.5em;
+}
+
+.contact .contact-icons ul i {
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+/* footer */
+footer {
+  background-color: black;
+  color: white;
+  height: 150px;
+}
+
+footer div {
+  position: relative;
+  text-align: center;
+  top: 75%;
+  font-size: smaller;
+}
+/*# sourceMappingURL=index.css.map */
