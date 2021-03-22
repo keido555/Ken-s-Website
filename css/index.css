@@ -243,15 +243,15 @@ header .head ul li {
   z-index: 30;
 }
 
-@media screen and (max-width: 500px) {
-  .top-header h1 {
-    font-size: 56px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .top-header h1 {
     font-size: 64px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .top-header h1 {
+    font-size: 48px;
   }
 }
 
@@ -274,12 +274,12 @@ header .head ul li {
   z-index: 20;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 800px) {
   .top-header .top-header-deco {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     position: relative;
-    top: -16%;
+    top: -18%;
     left: 25%;
     opacity: 0.8;
     background: linear-gradient(to bottom left, transparent 50%, #f5f551 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, #f5f551 50%) bottom left/100% 50% no-repeat;
@@ -288,12 +288,12 @@ header .head ul li {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 480px) {
   .top-header .top-header-deco {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     position: relative;
-    top: -18%;
+    top: -16%;
     left: 25%;
     opacity: 0.8;
     background: linear-gradient(to bottom left, transparent 50%, #f5f551 50%) top left/100% 50% no-repeat, linear-gradient(to top left, transparent 50%, #f5f551 50%) bottom left/100% 50% no-repeat;
